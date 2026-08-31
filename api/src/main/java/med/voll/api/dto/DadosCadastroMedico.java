@@ -7,24 +7,15 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import med.voll.api.medico.Especialidade;
 
-public record DadosCadastroMedico(@NotBlank
-                                  String nome,
+public record DadosCadastroMedico(@NotBlank String nome,
 
-                                  @NotBlank
-                                  @Email
-                                  String email,
+                                  @NotBlank @Email String email,
 
-                                  @NotBlank
-                                  String telefone,
+                                  @NotBlank String telefone,
 
-                                  @NotBlank
-                                  @Pattern(regexp = "\\d{4,6}")
-                                  String crm,
+                                  @NotBlank @Pattern(regexp = "\\d{4,6}") String crm,
 
-                                  @NotNull
-                                  Especialidade especialidade,
+                                  @NotNull Especialidade especialidade,
 
-                                  @NotNull
-                                  @Valid
-                                  DadosEndereco endereco) {
+                                  @NotNull @Valid DadosEndereco endereco) {
 }
